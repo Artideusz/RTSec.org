@@ -1,0 +1,9 @@
+<nav class="navigation navbar navbar-expand navbar-light d-flex justify-content-end" >
+    <div class="navbar-brand mr-auto">
+        <img height="25px" src="/assets/images/logo.png" alt="RT Logo">
+        <a class="alogo" href="/">RTSec</a>
+    </div>
+    {% for item in site.data.navigation %}
+        <a class="mx-2 navLink {% if item.permalink == page.url %}current{% endif %}" href="{{ item.permalink }}">{{ item.name }}</a>
+    {% endfor %}
+</nav>

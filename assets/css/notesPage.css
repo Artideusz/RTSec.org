@@ -1,0 +1,84 @@
+h1 {
+    text-align: center;
+}
+
+.noteList {
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+}
+
+.justifyContent {
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    padding: 0;
+}
+
+.noteCont {
+    display: block;
+    position: relative;
+    margin: 1.5em;
+    background-color: rgb(20, 20, 20);
+    border-radius: 1em;
+}
+
+.mainCont {
+    padding-top: 1em;
+    width: 80%;
+    margin: auto;
+}
+
+.term {
+    display: inline-block;
+    padding: 0.7em;
+    border-radius: 0.2em;
+    margin: 1em;
+    background-color: rgb(0, 0, 0);
+    color: #0f0;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: monospace;
+}
+
+.fix {
+    margin-top: 16px;
+}
+
+.noteName {
+    display: block;
+    padding: 1em;
+}
+
+.noteList > li > a {
+    color: #fff;
+    transition: color 200ms ease-in;
+}
+
+.noteList > li > a:hover {
+    color: #999;
+}
+
+.noteList > li > a:hover {
+    text-decoration: none;
+}
+
+.sep {
+    background-color: #fff;
+}
+
+body, html {
+    background-color: rgb(26, 26, 26);
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .justifyContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .term {
+        display: none;
+    }
+}

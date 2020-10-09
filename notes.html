@@ -1,0 +1,29 @@
+---
+title: My notes
+layout: notes
+permalink: /notes/
+---
+
+<div class="text-center mainCont">
+    <div class="term"><div class="fix">$ cat ~/learning_corner</div></div>
+    <br>
+    {% for category in site.data.note_categories %}
+        {% assign notes = site.notes | where: "grouped_by", category %}
+        {% if notes[0] %}
+            <h2>{{ category }}</h2>
+            <hr class="sep">
+            <ul class="noteList justifyContent">
+            {% for note in notes %}
+                <li>
+                    <a href="{{note.url}}">
+                        <div class="noteCont">
+                            <h5 class="noteName">{{note.name}}</h5>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</div>
+
