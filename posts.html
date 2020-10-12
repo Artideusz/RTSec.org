@@ -9,14 +9,14 @@ permalink: /posts/
     <br>
     <ul class="list justifyContent">
     {% for post in site.posts %}
-        <li class="item">
-            <a href="{{ post.url }}">
+        <a href="{{ post.url }}">
+            <li class="item">
                 <h3>{{ post.title }}</h3>
                 <hr>
                 <img class="postImg" src="{{ post.imgpath }}">
-            </a>
-            <p>{{ post.excerpt }}</p>
-        </li>
+                <p>{{ post.excerpt }}</p>
+            </li>
+        </a>
     {% endfor %}
     </ul>
 </div>

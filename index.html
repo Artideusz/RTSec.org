@@ -46,14 +46,14 @@ layout: home
                 {% for i in (0..4) %}
                     {% if site.posts[i] %}
                         {% assign post = site.posts[i] %}
-                        <li class="item">
-                            <a href="{{ post.url }}">
+                        <a href="{{ post.url }}">
+                            <li class="item">
                                 <h3>{{ post.title }}</h3>
                                 <hr>
                                 <img class="postImg" src="{{ post.imgpath }}">
-                            </a>
-                            <p>{{ post.excerpt }}</p>
-                        </li>
+                                <p>{{ post.excerpt }}</p>
+                            </li>
+                        </a>
                     {% endif %}
                 {% endfor %}
             </ul>
